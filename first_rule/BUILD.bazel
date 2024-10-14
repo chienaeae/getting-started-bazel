@@ -1,0 +1,19 @@
+load("//first_rule:single_output_rule.bzl", "single_output_rule")
+load("//first_rule:multiple_output_rule.bzl", "multiple_output_rule")
+
+single_output_rule(
+    name = "single_output",
+    my_input_files = ["my_input_file.txt", "my_input_file2.txt"],
+    output_file_name = "my-non-sense",
+)
+
+multiple_output_rule(
+    name = "multiple_output",
+    my_input_files = [
+        "my_input_file.txt",
+        "my_input_file2.txt",
+        "my_input_file3.txt",
+    ],
+    output_file_name_prefix = "my-non-sense-123",
+)
+

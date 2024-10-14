@@ -1,0 +1,4 @@
+bazel-bin
+bazel-first
+bazel-out
+bazel-testlogs

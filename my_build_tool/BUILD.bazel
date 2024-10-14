@@ -1,0 +1,18 @@
+load("@rules_python//python:defs.bzl", "py_binary")
+load("//my_build_tool:my_build_rule.bzl", "my_build_rule")
+
+py_binary(
+  name = "build_tool",
+  srcs = ["build_tool.py"],
+  deps = [
+    #   "@my_deps//foo",
+    #   "@my_deps//bar",
+  ]
+)
+
+my_build_rule(
+    name = "my_build",
+    my_input_file = "input.txt",
+    output_file_name = "custom_output.txt",
+    my_custom_build_tool = "build_tool",
+)
