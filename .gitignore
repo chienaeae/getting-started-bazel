@@ -2,3 +2,9 @@ bazel-bin
 bazel-first
 bazel-out
 bazel-testlogs
+
+.venv
+
+.env
+
+.vscode
