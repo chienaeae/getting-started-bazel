@@ -3,19 +3,19 @@ load("@my_deps//:requirements.bzl", "requirement")
 py_binary(
     name = "gui",
     srcs = ["gui.py"],
+    imports = ["."],
     deps = [
         requirement("nicegui"),
         "//python-app/lib:tools",
     ],
-    imports = ["."],
 )
 
 py_binary(
     name = "cli",
     srcs = ["cli.py"],
+    imports = ["."],
     deps = [
         requirement("typer"),
         "//python-app/lib:tools",
     ],
-    imports = ["."],
 )

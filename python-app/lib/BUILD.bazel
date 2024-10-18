@@ -1,7 +1,8 @@
 py_library(
     name = "tools",
     srcs = [
-        "tools.py", "__init__.py"
+        "__init__.py",
+        "tools.py",
     ],
-    visibility = ["//visibility:public"]
+    visibility = ["//visibility:public"],
 )

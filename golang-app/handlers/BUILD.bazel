@@ -1,0 +1,9 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "handlers",
+    srcs = ["handler.go"],
+    importpath = "github.com/chienaeae/first-bazel/golang-app/handlers",
+    visibility = ["//visibility:public"],
+    deps = ["//golang-app/pkg/greetings"],
+)
